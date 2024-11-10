@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>MiniSocial DApp</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdn.jsdelivr.net/gh/ethereum/web3.js@1.5.2/dist/web3.min.js"></script>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Sidebar for navigation -->
+    <div class="sidebar">
+        <h1>MiniSocial DApp</h1>
+        <a href="./index.html">Home</a>
+        <a href="./home.html">Profile</a>
+    </div>
+
+    <!-- Main content (feed) -->
+    <div class="main-content">
+        <!-- Post composer -->
+        <div class="composer">
+            <h2>What's happening?</h2>
+            <textarea id="postMessage" placeholder="Write your post here..." rows="3"></textarea>
+            <button onclick="publishPost()" class="publish-btn">Publish</button>
+        </div>
+
+        <!-- Posts container -->
+        <div id="postsContainer">
+            <!-- Individual posts will be appended here by JavaScript -->
+        </div>
+    </div>
+
+    <!-- Right sidebar for extra content (e.g., trends, stats) -->
+    <div class="right-sidebar">
+        <h2>Trends</h2>
+        <p id="totalPosts">Total Posts: 0</p>
+
+        <!-- Post retrieval section -->
+        <h2>Retrieve a Post</h2>
+        <input type="number" id="postIndex" placeholder="Enter post index">
+        <button onclick="getPost()">Get Post</button>
+        <p id="postContent">Post Content:</p>
+        <p id="postAuthor">Post Author:</p>
+
+        <!-- Delete post section -->
+        <h2>Delete a Post</h2>
+        <input type="number" id="deleteIndex" placeholder="Enter post index to delete">
+        <button onclick="deletePost()">Delete Post</button>
+        <p>Status: <span id="status">Loading...</span></p>
+    </div>
+</body>
+</html>

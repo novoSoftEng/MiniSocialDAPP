@@ -1,0 +1,329 @@
+/* Basic Twitter-like structure */
+body {
+    display: flex;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #e6ecf0;
+    padding-top: 20px; /* Added top margin for spacing */
+}
+.publish-btn{
+    z-index: 99;
+    margin-bottom: 5px;
+    padding-bottom: 10px;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 10%;
+    background-color: #ffffff;
+    padding: 20px;
+    border-right: 1px solid #ddd;
+    height: 100vh;
+}
+
+.sidebar h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #1da1f2;
+}
+
+.sidebar a {
+    display: block;
+    padding: 10px;
+    color: #1da1f2;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.sidebar a:hover {
+    background-color: #f5f8fa;
+    border-radius: 20px;
+}
+
+/* Main content area */
+.main-content {
+    width: 60%;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+/* Post composer area */
+.composer {
+    background-color: #ffffff;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.composer textarea {
+    width: 100%;
+    border: none;
+    resize: none;
+    font-size: 16px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.composer button {
+    background-color: #1da1f2;
+    color: #fff;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 20px;
+    cursor: pointer;
+    float: right;
+    margin-top: 10px;
+}
+
+.composer button:hover {
+    background-color: #0a85d0;
+}
+
+/* Post structure */
+.post {
+    background-color: #ffffff;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.post .author {
+    font-weight: bold;
+    color: #1da1f2;
+}
+
+.post .content {
+    margin-top: 5px;
+    font-size: 16px;
+    color: #555;
+}
+
+/* Interactions (Like, Comment, Share) */
+.post .actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+    color: #1da1f2;
+    margin-top: 10px;
+}
+
+.post .actions button {
+    background: none;
+    border: none;
+    color: #1da1f2;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.post .actions button:hover {
+    text-decoration: underline;
+}
+
+/* Like, Comment, Share Icons */
+.like,
+.dislike,
+.comment,
+.share {
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.like:hover,
+.dislike:hover,
+.comment:hover,
+.share:hover {
+    color: #0a85d0;
+}
+
+/* Comment Section */
+.comment-section {
+    margin-top: 20px;
+    padding-top: 10px;
+    border-top: 1px solid #ddd;
+}
+
+.comment-section .comment {
+    background-color: #f5f8fa;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+.comment-section .comment .author {
+    font-weight: bold;
+    color: #1da1f2;
+}
+
+.comment-section .comment .content {
+    margin-top: 5px;
+    font-size: 14px;
+    color: #555;
+}
+
+/* Comment input field */
+.comment-input {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    margin-top: 10px;
+}
+
+/* Right sidebar (for additional info, like trends or profile summary) */
+.right-sidebar {
+    width: 20%;
+    padding: 20px;
+    height: 100vh;
+    background-color: #ffffff;
+    border-left: 1px solid #ddd;
+}
+
+/* Post Menu (for more actions like edit, delete) */
+.post-menu {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 14px;
+    color: #aaa;
+}
+
+.post-menu a {
+    text-decoration: none;
+    color: #1da1f2;
+}
+
+.post-menu a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .sidebar, .right-sidebar {
+        width: 100%;
+        height: auto;
+        border: none;
+    }
+
+    .main-content {
+        width: 100%;
+    }
+
+    .composer button {
+        width: 100%;
+        margin-top: 10px;
+    }
+}
+/* Post styling */
+.post {
+    background-color: #ffffff;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.post-details {
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.post-details div {
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+
+.post-actions {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.post-actions button {
+    padding: 8px 15px;
+    font-size: 14px;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+}
+
+.like {
+    background-color: #1da1f2;
+    color: #fff;
+}
+
+.like:hover {
+    background-color: #0a85d0;
+}
+
+.dislike {
+    background-color: #ff5c5c;
+    color: #fff;
+}
+
+.dislike:hover {
+    background-color: #e02f2f;
+}
+
+.delete {
+    background-color: #ff6666;
+    color: #fff;
+}
+
+.delete:hover {
+    background-color: #e02f2f;
+}
+
+.show-comments {
+    background-color: #e1e8ed;
+    color: #333;
+    padding: 8px 15px;
+    font-size: 14px;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+}
+
+.show-comments:hover {
+    background-color: #c1d3da;
+}
+
+/* Comments section styling */
+.comments-section {
+    margin-top: 20px;
+}
+
+.comments-container {
+    margin-top: 15px;
+    padding-left: 10px;
+}
+
+.comment-input {
+    width: 100%;
+    padding: 8px;
+    font-size: 14px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    resize: none;
+}
+
+.add-comment {
+    background-color: #1da1f2;
+    color: #fff;
+    border: none;
+    padding: 8px 15px;
+    font-size: 14px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.add-comment:hover {
+    background-color: #0a85d0;
+}
