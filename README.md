@@ -64,6 +64,10 @@ Chaque interaction avec le contrat est gérée via des appels de fonction Solidi
 7. **likePost / dislikePost** : Permet de réagir aux posts.
 
 ---
+### Interface Graphique
+#### Page d'enregistrement
+![page enregistrement](./public/reg.png)
+---
 
 ### Résultats et Evaluation
 
