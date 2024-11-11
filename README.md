@@ -66,7 +66,15 @@ Chaque interaction avec le contrat est gérée via des appels de fonction Solidi
 ---
 ### Interface Graphique
 #### Page d'enregistrement
+Dans le cas que l'utilisateur n'est pas déja un utilisateur de l'application il sera dirigier à cette page ou il va choisir un username et écrire une Bio .
+Cette fonctionalité à était implementé par *mapping* de tout les utilisateurs avec un *addresse* , cette adress fonctionne comme identifiant unique de chaque user.
 ![page enregistrement](./public/reg.png)
+#### Page de profile
+Ici l'utilisateur peut consulter son profile et rapporté des modification .
+![page enregistrement](./public/profile.png)
+#### Page de Flux
+Ici L'utilisateur peut consulter les publications des autres utilisateurs de l'application commenter et réagir avec un like ou dislike et aussi de modifier les posts qui appartient à lui méme.
+![page enregistrement](./public/flux.png)
 ---
 
 ### Résultats et Evaluation
