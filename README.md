@@ -73,7 +73,9 @@ Cette fonctionalité à était implementé par *mapping* de tout les utilisateur
 Ici l'utilisateur peut consulter son profile et rapporté des modification .
 ![page enregistrement](./public/profile.png)
 #### Page de Flux
+
 Ici L'utilisateur peut consulter les publications des autres utilisateurs de l'application commenter et réagir avec un like ou dislike et aussi de modifier les posts qui appartient à lui méme.
+
 ![page enregistrement](./public/flux.png)
 ---
 
